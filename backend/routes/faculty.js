@@ -1,0 +1,14 @@
+const express = require('express');
+const { requireAuth, requireRole } = require('../middleware/auth');
+const controller = require('../controllers/facultyController');
+const router = express.Router();
+router.use(requireAuth, requireRole('faculty', 'admin'));
+router.get('/overview', controller.classOverview);
+router.get('/questions', controller.listQuestions);
+router.post('/questions', controller.saveQuestion);
+router.patch('/questions/:id', controller.saveQuestion);
+router.delete('/questions/:id', controller.deleteQuestion);
+router.post('/announcements', controller.announce);
+router.get('/reports/progress.csv', controller.csvReport);
+router.get('/reports/progress.pdf', controller.pdfReport);
+module.exports = router;

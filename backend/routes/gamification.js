@@ -1,0 +1,10 @@
+const express = require('express');
+const { requireAuth } = require('../middleware/auth');
+const controller = require('../controllers/gamificationController');
+const router = express.Router();
+router.get('/leaderboard', controller.getLeaderboard);
+router.use(requireAuth);
+router.get('/profile', controller.getProfileGamification);
+router.post('/challenge', controller.recordChallenge);
+router.post('/badges/:key/seen', controller.markBadgeSeen);
+module.exports = router;

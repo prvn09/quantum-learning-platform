@@ -1,0 +1,28 @@
+@keyframes particleDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(18px, -24px, 0) rotate(90deg); }
+}
+
+@keyframes progressFill {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.08) rotate(4deg); }
+}
+
+.particle {
+  animation: particleDrift 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.progress-fill {
+  transform-origin: left;
+  animation: progressFill 1.2s var(--ease-smooth) both;
+}
+
+.icon-pulse {
+  animation: pulseIcon 3s ease-in-out infinite;
+}

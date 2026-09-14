@@ -1,0 +1,10 @@
+const express = require('express');
+const { requireAuth, requireRole } = require('../middleware/auth');
+const controller = require('../controllers/facultyStudentController');
+const router = express.Router();
+router.use(requireAuth, requireRole('faculty', 'admin'));
+router.get('/:studentId', controller.detail);
+router.post('/:studentId/messages', controller.sendMessage);
+router.get('/:studentId/report.csv', controller.csv);
+router.get('/:studentId/report.pdf', controller.pdf);
+module.exports = router;

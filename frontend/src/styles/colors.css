@@ -1,0 +1,16 @@
+:root {
+  --quantum-violet: #6c5ce7;
+  --quantum-cyan: #00d9ff;
+  --quantum-electric-purple: #9d4edd;
+  --quantum-green: #39ff14;
+  --quantum-ink: #0f0c29;
+  --quantum-indigo: #302b63;
+  --quantum-white: #f5f5f5;
+}
+
+.text-gradient {
+  background: linear-gradient(110deg, var(--quantum-cyan), var(--quantum-white) 55%, var(--quantum-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

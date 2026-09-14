@@ -1,0 +1,13 @@
+{
+  "name": "Quantum Atlas",
+  "tokens": {
+    "primary": "#6C5CE7",
+    "secondary": "#00D9FF",
+    "electricPurple": "#9D4EDD",
+    "accent": "#39FF14",
+    "backgroundStart": "#0F0C29",
+    "backgroundEnd": "#302B63",
+    "text": "#F5F5F5"
+  },
+  "figmaReference": "Create variables with these names in the Quantum Atlas design file."
+}
